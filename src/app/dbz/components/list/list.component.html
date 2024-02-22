@@ -1,0 +1,15 @@
+<h4>Listado</h4>
+    <ul class="list-group">
+      <li *ngFor="let item of characterList; let i=index"
+          class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            {{i+1}} -- {{item.name}} - {{item.power}}
+          </div>
+          <button class="btn btn-danger" (click)="deleteCharacter(i)">X</button>
+        </li>
+      <!-- <li class="list-group-item">Krilin - 500</li>
+      <li class="list-group-item">Goku - 10000</li> -->
+    </ul>
+
+
+    <!-- <pre>{{characterList | json}}</pre> -->
