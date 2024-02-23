@@ -13,11 +13,20 @@ export class ListComponent {
   @Output()
   public onDeleteCharacter:EventEmitter<number>=new EventEmitter();
 
+  @Output()
+  public onDeleteCharacterByUuid:EventEmitter<string>=new EventEmitter();
+
 
   deleteCharacter(i:number):void{
     console.log(i);
 
     this.onDeleteCharacter.emit(i);
+  }
+
+  deleteCharacterByUuid(id:string):void{
+    console.log(id);
+
+    this.onDeleteCharacterByUuid.emit(id);
   }
 
 
